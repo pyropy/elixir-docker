@@ -1,7 +1,7 @@
 defmodule Docker.Mixfile do
   use Mix.Project
 
-  def project do
+  def project() do
     [app: :docker,
      version: "0.0.1",
      elixir: "~> 1.0",
@@ -10,7 +10,7 @@ defmodule Docker.Mixfile do
      deps: deps]
   end
 
-  def application do
+  def application() do
     [applications: [
         :logger,
         :exjsx,
@@ -18,25 +18,24 @@ defmodule Docker.Mixfile do
     ]]
   end
 
-  defp deps do
+  defp deps() do
     [
       {:exjsx, "~> 3.0"},
       {:hackney, "~> 1.17.2"},
     ]
   end
 
-  defp desc do
+  defp desc() do
     """
     Docker API Binding
     """
   end
 
-  defp package do
+  defp package() do
     [
       licenses: ["MIT"],
       maintainers: ["Bearice Ren"],
       links: %{"Github" => "https://github.com/bearice/elixir-docker"}
     ]
   end
-
 end
